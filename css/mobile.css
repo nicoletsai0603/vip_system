@@ -1,0 +1,45 @@
+    @media screen and (max-width: 1438px) {
+        .area2 {
+            width: 100%;
+        }
+        .map img {
+            width: 100%;
+        }
+        .map {
+            position: fixed;
+            right: 0;
+        }
+        .map {
+            width: 400px;
+        }
+        .information {
+            width: calc(100vw - 101px - 400px);
+        }
+    }
+    
+    @media screen and (max-width: 1283px) {
+        h5.number {
+            font-size: 3rem;
+        }
+    }
+    
+    @media screen and (max-width: 1127px) {
+        h2.cause {
+            font-size: 3rem;
+        }
+        h2::after,
+        h3.cause2::before,
+        h3.cause2::after {
+            display: none;
+        }
+        .area {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 803px) {
+        h1 a.logo {
+            width: 600px;
+            background-size: contain;
+        }
+    }
