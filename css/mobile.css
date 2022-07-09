@@ -3,17 +3,17 @@
             width: 100%;
         }
         .map img {
-            width: 100%;
-        }
-        .map {
-            position: fixed;
-            right: 0;
-        }
-        .map {
-            width: 400px;
+            width: 90%;
         }
         .information {
-            width: calc(100vw - 101px - 400px);
+            width: calc(100vw - 101px);
+        }
+        .information_select {
+            margin-bottom: 10px;
+        }
+        .map {
+            width: calc(100vw - 101px);
+            margin-top: 0;
         }
     }
     
@@ -26,14 +26,16 @@
     @media screen and (max-width: 1127px) {
         h2.cause {
             font-size: 3rem;
+            line-height: 3rem;
         }
-        h2::after,
-        h3.cause2::before,
-        h3.cause2::after {
-            display: none;
+    }
+    
+    @media screen and (max-width: 940px) {
+        .lightbox {
+            width: calc(50% - 10px);
         }
-        .area {
-            width: 100%;
+        .infor200 {
+            width: 50%;
         }
     }
     

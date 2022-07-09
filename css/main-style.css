@@ -5,13 +5,14 @@
         font-style: normal;
     }
     
+    @import url("http://fonts.googleapis.com/earlyaccess/notosanstc.css");
     @import url("reset.css");
     body {
         width: 100vw;
         overflow-x: hidden;
         background: #1F2630 url(../img/main_bg.svg) 0 0 no-repeat;
         color: #fff;
-        font-family: Verdana, 微軟正黑體;
+        font-family: Verdana, Noto Sans CJK TC;
         font-size: 1.5rem;
         background-size: cover;
     }
@@ -25,13 +26,14 @@
         width: 100px;
         position: fixed;
         height: 100vh;
-        background: url(../img/submenu.svg) 0 0 no-repeat;
-        background-size: cover;
+        background: linear-gradient(to bottom, #1f2630 0%, #2c3745 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         z-index: 100;
+        top: 0
     }
     
     .submenu ul {
@@ -79,19 +81,21 @@
         width: calc(100vw - 101px);
         float: right;
         display: flex;
+        flex-wrap: wrap;
         border-left: #000 1px solid;
     }
     
     header {
-        min-height: 80px;
+        height: 80px;
         width: 100vw;
-        background: #000 url(../img/header_bg.svg) 0 0 no-repeat;
-        background-size: cover;
-        display: flex;
-        align-items: center;
+        background: url(../img/header_bg.jpg) right no-repeat;
         padding: 0 26px;
         position: fixed;
         z-index: 99;
+        display: flex;
+        align-items: center;
+        background-size: cover;
+        top: 0
     }
     
     h1 {
@@ -114,18 +118,24 @@
         padding: 10px;
         width: 66%;
         margin-top: 80px;
+        min-height: calc(100vh - 80px);
+        background: linear-gradient(-45deg, #1f2630 0%, #2c3745 100%);
     }
     
     .information_border {
         width: 100%;
         min-height: 94px;
         border: 2px solid;
-        border-image: linear-gradient(to right, #0074BD, #008F97) 1;
+        border-image: linear-gradient(0deg, #0074BD, #008F97) 1;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 26px;
+        padding: 0 20px;
+    }
+    
+    .information_select {
+        margin-left: auto;
     }
     
     h2.cause {
@@ -166,7 +176,7 @@
     }
     
     .information_border.infor2 {
-        padding: 15px 10px;
+        padding: 10px 10px 0 10px;
         margin-top: 10px;
     }
     
@@ -176,7 +186,7 @@
         align-items: center;
         width: 100%;
         display: flex;
-        margin: 10px 0;
+        margin: 5px 0 15px 0;
     }
     
     h3.cause2::before {
@@ -234,6 +244,10 @@
         margin: 15px 0;
     }
     
+    .area3 {
+        width: 55%;
+    }
+    
     h5.number {
         font-weight: 900;
         display: flex;
@@ -258,12 +272,11 @@
         justify-content: center;
         font-size: 3.125rem;
         line-height: 3.125rem;
-        background: linear-gradient(to left, #00CCFF, #00FFF7);
+        background: linear-gradient(to right, #00CCFF, #00FFF7);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
         margin-bottom: 0;
-        font-weight: bold;
     }
     
     .map {
@@ -273,6 +286,9 @@
         flex-direction: column;
         margin-top: 80px;
         min-width: 400px;
+        justify-content: center;
+        background: linear-gradient(-45deg, #1f2630 0%, #2c3745 100%);
+        font-size: 1.125rem;
     }
     
     .map img {
@@ -284,15 +300,16 @@
         width: calc(100vw - 100px);
         margin-left: 100px;
         position: relative;
-        height: 100vh;
+        height: calc(100vh - 80px);
+        margin-top: 80px;
     }
     
     .lightbox {
-        background-color: rgba(31, 38, 48, 0.7);
+        background: linear-gradient(-45deg, rgba(31, 38, 48, 0.7) 0%, rgba(44, 55, 69, 0.7) 100%);
         width: 416px;
         position: absolute;
         z-index: 2;
-        padding: 15px 20px;
+        padding: 5px 10px 15px;
         left: 5px;
         bottom: 0
     }
@@ -301,7 +318,7 @@
         font-size: 1.438rem;
         margin: 5px 0;
         min-height: unset;
-        background: linear-gradient(to left, #00CCFF, #00FFF7);
+        background: linear-gradient(to right, #00CCFF, #00FFF7);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -316,8 +333,8 @@
     }
     
     .lightbox_border {
-        background-color: rgba(31, 38, 48, 0.7);
-        padding: 10px;
+        background: linear-gradient(-45deg, rgba(31, 38, 48, 0.7) 0%, rgba(44, 55, 69, 0.7) 100%);
+        padding: 5px 10px;
         position: relative;
         overflow: hidden;
     }
@@ -325,18 +342,18 @@
     .company_title {
         font-size: 0.95rem;
         color: #00CDD7;
-        font-weight: bold;
-        margin: 10px 0;
+        margin-bottom: 5px;
+        font-size: 1.25rem;
     }
     
     .company {
-        font-size: 0.938rem;
+        font-size: 0.9rem;
         padding: 0;
         margin-bottom: 0;
     }
     
     .company li {
-        margin-bottom: 5px;
+        margin-bottom: 2px;
         display: inline-flex;
         width: 100%;
     }
@@ -352,18 +369,26 @@
     
     .btn_bg.detail {
         float: right;
+        font-size: 1.125rem;
+        min-width: 81px;
+        min-height: 28px;
+        border-radius: 5px;
+        padding: 0
     }
     /*最右側文字資料*/
     
     .infor200 {
-        background-color: rgba(31, 38, 48, 0.7);
+        background: linear-gradient(-45deg, rgba(31, 38, 48, 0.7) 0%, rgba(44, 55, 69, 0.7) 100%);
         width: 400px;
         height: calc(100vh - 80px);
         position: absolute;
         z-index: 2;
-        padding: 27px 20px;
+        padding: 27px 10px 0;
         right: 0;
-        top: 80px
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto
     }
     
     .infor_txt {
@@ -398,7 +423,8 @@
     }
     
     .btn_bg.gray {
-        background: linear-gradient(to bottom, rgb(112, 112, 112) 0%, rgb(145, 145, 145) 100%);
+        margin-right: 20px;
+        background: linear-gradient(to top, rgb(112, 112, 112) 0%, rgb(145, 145, 145) 100%);
     }
     
     .illustrate {
@@ -413,7 +439,11 @@
     .illustrate3 {
         margin: 0;
         padding: 0;
-        font-size: 0.9rem;
+        font-size: 1rem;
+    }
+    
+    .illustrate3 li {
+        list-style-type: none;
     }
     
     .illustrate2 li {
@@ -421,6 +451,7 @@
         align-items: center;
         margin: 15px 2px;
         font-size: 0.9rem;
+        list-style-type: none;
     }
     
     .colorblock {
@@ -453,14 +484,26 @@
         background-color: #FFFF96;
     }
     
+    .lightbox_border1 {
+        background: linear-gradient(-45deg, rgba(31, 38, 48, 0.7) 0%, rgba(44, 55, 69, 0.7) 100%);
+        padding: 5px 10px;
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+    }
+    
     .page {
-        text-align: center;
         padding: 0;
         font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+        /* 利用flex特性，margin-top設auto後會自動計算上面有多少空間而將元素往下推移 */
     }
     
     .page li {
         display: inline-flex;
-        margin: 15px 3px;
+        margin: 0 3px;
         align-items: center;
     }
