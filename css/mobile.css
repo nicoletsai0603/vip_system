@@ -13,6 +13,9 @@
         margin-top: 0;
         max-width: unset;
     }
+    .main {
+        position: unset;
+    }
 }
 
 @media screen and (max-width: 1283px) {

@@ -12,6 +12,7 @@
         font-family: Verdana, Noto Sans CJK TC;
         font-size: 1.5rem;
         background-size: cover;
+        background: linear-gradient(-45deg, #1f2630 0%, #2c3745 100%);
     }
     
     * {
