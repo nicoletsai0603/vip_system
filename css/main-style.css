@@ -92,7 +92,7 @@
     
     header {
         height: 80px;
-        width: 100vw;
+        width: calc(100vw - 80px);
         background: url(../img/header_bg.jpg) right no-repeat;
         padding: 0 26px;
         position: fixed;
@@ -100,14 +100,15 @@
         display: flex;
         align-items: center;
         background-size: cover;
-        top: 0
+        top: 0;
+        margin-left: 80px;
     }
     
     h1 {
         font-size: 0em;
         display: inline-block;
         margin-bottom: 0;
-        margin-left: 100px;
+        margin-left: 10px;
     }
     
     h1 a.logo {
