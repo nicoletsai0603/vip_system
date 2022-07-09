@@ -3,13 +3,13 @@
         width: 80%;
     }
     .information {
-        width: calc(100vw - 101px);
+        width: calc(100vw - 100px);
     }
     .information_select {
         margin-bottom: 10px;
     }
     .map {
-        width: calc(100vw - 101px);
+        width: calc(100vw - 100px);
         margin-top: 0;
         max-width: unset;
     }
